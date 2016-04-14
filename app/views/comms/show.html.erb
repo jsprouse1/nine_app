@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @comm.author %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @comm.body %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @comm.video %>
+</p>
+
+<%= link_to 'Edit', edit_comm_path(@comm) %> |
+<%= link_to 'Back', comms_path %>

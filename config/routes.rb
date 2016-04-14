@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :coms
+  resources :comms
   resources :comments
   resources :videos
   # The priority is based upon order of creation: first created -> highest priority.

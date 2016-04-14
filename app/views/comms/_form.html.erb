@@ -1,10 +1,10 @@
-<%= form_for(@com) do |f| %>
-  <% if @com.errors.any? %>
+<%= form_for(@comm) do |f| %>
+  <% if @comm.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@com.errors.count, "error") %> prohibited this com from being saved:</h2>
+      <h2><%= pluralize(@comm.errors.count, "error") %> prohibited this comm from being saved:</h2>
 
       <ul>
-      <% @com.errors.full_messages.each do |message| %>
+      <% @comm.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user %>
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :video_id %><br>
-    <%= f.number_field :video_id %>
+    <%= f.text_field :video_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

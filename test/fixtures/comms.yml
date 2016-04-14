@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: MyString
+  author: MyString
   body: MyString
-  video_id: 1
+  video_id: 
 
 two:
-  user: MyString
+  author: MyString
   body: MyString
-  video_id: 1
+  video_id: 

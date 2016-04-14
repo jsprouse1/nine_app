@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ComTest < ActiveSupport::TestCase
+class CommTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

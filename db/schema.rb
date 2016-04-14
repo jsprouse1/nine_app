@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414171541) do
+ActiveRecord::Schema.define(version: 20160414174617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20160414171541) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "comms", force: :cascade do |t|
+    t.string   "author"
+    t.string   "body"
+    t.integer  "video_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comms", ["video_id"], name: "index_comms_on_video_id", using: :btree
 
   create_table "coms", force: :cascade do |t|
     t.string   "user"
@@ -50,4 +60,5 @@ ActiveRecord::Schema.define(version: 20160414171541) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comms", "videos"
 end
