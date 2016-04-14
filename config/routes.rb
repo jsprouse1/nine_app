@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  resources :coms
+  resources :comments
+  resources :videos
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-root 'application#front'
+root 'videos#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -34,8 +37,7 @@ root 'application#front'
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
-  #     resources :comments
-  #     resources :sales do
+  #     #     resources :sales do
   #       get 'recent', on: :collection
   #     end
   #   end
