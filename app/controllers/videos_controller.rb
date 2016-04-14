@@ -10,6 +10,8 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+    @video = Video.find(params[:id])
+    @comms = @video.comms.paginate(page: params[:page])
   end
 
   # GET /videos/new

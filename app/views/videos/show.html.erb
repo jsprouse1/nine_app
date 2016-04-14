@@ -10,5 +10,15 @@
   <%= @video.link %>
 </p>
 
+<div class="col-md-8">
+    <% if @video.comms.any? %>
+      <h3>Comments (<%= @video.comms.count %>)</h3>
+      <ol class="microposts">
+        <%= render @comms %>
+      </ol>
+      <%= will_paginate @comms %>
+    <% end %>
+  </div>
+
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
