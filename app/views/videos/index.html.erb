@@ -18,7 +18,7 @@
         <td><%= video.link %></td>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Comment',{ :controller => "comms", :action => "new", :video_id => video.id}%></td>
       </tr>
     <% end %>
   </tbody>
